@@ -82,3 +82,47 @@ if __name__ == '__main__':
     edad_promedio_curso = df_calificaciones_completas.groupby('nombre_curso')['edad'].mean().round(0)
     print("   Edad promedio por curso: ")
     print(edad_promedio_curso.to_string())
+
+    # =============================================================
+    # 3. ANÁLISIS CON FILTRADO Y CONTEO
+    # ¿Cuántos estudiantes aprobaron el curso 'Bases De Datos Sql'? (nota >= 3.0)
+    # Se filtra por nombre del curso y nota mínima aprobatoria
+    # len() cuenta cuántos registros cumplen ambas condiciones
+    # =============================================================
+
+    print("\n3. ANÁLISIS CON FILTRADO Y CONTEO\n")
+    print("   ¿Cuántos estudiantes aprobaron el curso 'Bases De Datos Sql' (nota mayor a 3.5)?\n")
+
+    # Se define el curso a analizar y la nota mínima aprobatoria
+    curso_BD = 'Bases De Datos Sql'
+    curso_python = 'Python Para Data Science'
+    curso_frontend = 'Frontend Avanzado'
+    curso_git = 'Introducción A Git'
+    curso_web = 'Desarrollo Web Con Java'
+    curso_software = 'Arquitectura De Software'
+    nota_minima_aprobatoria = 3.5
+
+    # Se filtran los registros que corresponden al curso seleccionado y tienen nota mayor o igual a la mínima aprobatoria
+    estudiantes_aprobados_BD = df_calificaciones_completas[
+        (df_calificaciones_completas['nombre_curso'] == curso_BD) &
+        (df_calificaciones_completas['nota'] >= nota_minima_aprobatoria)
+    ]
+    cantidad_estudiantes_aprobados_BD = len(estudiantes_aprobados_BD)
+    print(f"   Cantidad de estudiantes que aprobaron '{curso_BD}': {cantidad_estudiantes_aprobados_BD}")
+
+    # =============================================================
+    # 3.1
+    # ¿Cuántos estudiantes reprobaron el curso 'Bases De Datos Sql'? (nota < 3.5)
+    # Se filtra por nombre del curso y nota mínima aprobatoria
+    # len() cuenta cuántos registros cumplen ambas condiciones
+    # =============================================================
+
+    print("   ¿Cuántos estudiantes reprobaron el curso 'Bases De Datos Sql' (nota menor a 3.5)?\n")
+
+    # Se filtran los registros que corresponden al curso seleccionado y tienen nota menor a la mínima aprobatoria
+    estudiantes_reprobados_BD = df_calificaciones_completas[
+        (df_calificaciones_completas['nombre_curso'] == curso_BD) &
+        (df_calificaciones_completas['nota'] < nota_minima_aprobatoria)
+    ]
+    cantidad_estudiantes_reprobados_BD = len(estudiantes_reprobados_BD)
+    print(f"   Cantidad de estudiantes que reprobaron '{curso_BD}': {cantidad_estudiantes_reprobados_BD}")
