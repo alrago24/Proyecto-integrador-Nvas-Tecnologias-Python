@@ -56,3 +56,29 @@ if __name__ == '__main__':
     estudiantes_por_curso = df_calificaciones_completas.groupby('nombre_curso')['estudiante_id'].nunique()
     print(f"   Cantidad de estudiantes por curso:\n{estudiantes_por_curso.to_string()}\n")
 
+    # =============================================================
+    # 2. ANÁLISIS DE AGREGACIÓN (GROUPBY)
+    # ¿Cuál es la nota promedio por curso?
+    # Con groupby() agrupamos los registros por nombre de curso
+    # Con mean() calculamos el promedio de nota para cada grupo
+    # Con round() redondeamos a 2 decimales para mejor lectura
+    # =============================================================
+
+    print("2. ANÁLISIS DE AGREGACIÓN")
+    print("   ¿Cuál es la nota promedio por curso?\n")
+
+    nota_promedio_curso = df_calificaciones_completas.groupby('nombre_curso')['nota'].mean().round(2)
+    print("   Nota promedio por curso: ")
+    print(nota_promedio_curso.to_string())
+
+    # =============================================================
+    # 2.1
+    # ¿Cuál es la edad promedio por curso?
+    # Con groupby() agrupamos los registros por nombre de curso
+    # Con mean() calculamos el promedio de edad para cada grupo
+    # =============================================================
+
+    print("\n   ¿Cuál es la edad promedio por curso?\n")
+    edad_promedio_curso = df_calificaciones_completas.groupby('nombre_curso')['edad'].mean().round(0)
+    print("   Edad promedio por curso: ")
+    print(edad_promedio_curso.to_string())
