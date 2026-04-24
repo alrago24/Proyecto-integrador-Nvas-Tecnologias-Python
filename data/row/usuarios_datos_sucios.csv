@@ -1,0 +1,51 @@
+id,nombre,apellido,edad,email,perfil_id
+1,Andres,Ramirez,62,andres.ramirez@yahoo.com,209
+2,maria,Perez,47,maria.perez@example.com,ID_17
+3,Maria,  Lopez  ,35,maria.lopez@example.com,26
+4,diego,Rodriguez,-5,diego.rodriguez@yahoo.com,229
+5,Maria,Martinez,64,mariamartinez@gmailcom,
+6,Andres,  Sanchez  ,150,andres.sanchez@u.edu.co,27
+7,Maria,  Ruiz  ,25,maria.ruiz@example.com,76
+8,Paula,Garcia,54,paula.garcia@yahoo.com,71
+9,Ana,  Perez  ,28,ana.perez@example.com,130
+10,luis,Gomez,53,luis.gomez@yahoo.com,51
+11,Paula,Sanchez,30,paulasanchez@gmailcom,229
+12,Paula,  Garcia  ,57,paula.garcia@u.edu.co ,73
+13,Maria,Torres,66,maria.torres@u.edu.co,22
+14,andres,Garcia,41,andresgarcia@yahoocom,ID_144
+15,Maria,Garcia,26,no-tiene-email,124
+16,Paula,  Ramirez  ,54,paula.ramirez@outlook.es,149
+17,Elena,Martinez,59,elena.martinez@yahoo.com,93
+18,juan,Ramirez,,juan.ramirez@gmail.com,59
+19,paula,Sanchez,66,paula.sanchez@gmail.com,ID_38
+20,Maria,Torres,50,maria.torres@yahoo.com ,192
+21,Elena,Ruiz,25,elenaruiz@ueduco,241
+22,Ana,Torres,27,ana.torres@@gmail.com,99
+23,Luis,Garcia,62,luis.garcia@gmail.com,56
+24,Maria,Garcia,63,mariagarcia@yahoocom,162
+25,Ana,Perez,20,ana.perez@example.com ,217
+26,Diego,Torres,24,diego.torres@outlook.es,141
+27,Diego,Garcia,33,diego.garcia@outlook.es ,249
+28,Juan,Sanchez,-5,juan.sanchez@u.edu.co,23
+29,Juan,Torres,37,juantorres@ueduco,202
+30,luis,Ramirez,37,luis.ramirez@outlook.es,215
+31,Paula,Gomez,67,paula.gomez@gmail.com,21
+32,Elena,Martinez,54,elenamartinez@examplecom,181
+33,Maria,Perez,23,maria.perez@yahoo.com,164
+34,Lucia,Garcia,51,lucia.garcia@example.com ,40
+35,Ana,  Ruiz  ,33,ana.ruiz@yahoo.com ,26
+36,Elena,Rodriguez,38,elena.rodriguez@yahoo.com ,41
+37,andres,Sanchez,48,andres.sanchez@@gmail.com,4
+38,elena,Sanchez,24,no-tiene-email,149
+39,Juan,Ramirez,65,juanramirez@ueduco,ID_152
+40,Ana,Rodriguez,18,anarodriguez@outlookes,243
+41,Andres,Torres,69,andres.torres@example.com,143
+42,Carlos,Gomez,34,carlos.gomez@gmail.com,ID_2
+43,elena,Martinez,54,elenamartinez@ueduco,94
+44,Maria,  Lopez  ,veinte,maria.lopez@outlook.es,149
+45,luis,Gomez,68,luis.gomez@example.com,22
+46,Elena,Gomez,150,elena.gomez@u.edu.co,97
+47,Luis,Gomez,27,luis.gomez@yahoo.com,159
+48,Luis,Lopez,38,luis.lopez@gmail.com ,136
+49,maria,Ramirez,46,maria.ramirez@gmail.com,161
+50,Juan,Ramirez,59,juan.ramirez@gmail.com,130
