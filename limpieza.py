@@ -101,3 +101,27 @@ def limpieza_perfiles(df_perfiles):
 
         # index=False evita guardar el índice de Pandas en el archivo
         df_cursos.to_csv("data/proccesed/cursos_limpios.csv", index=False)
+def limpieza_calificaciones(df_calificaciones):
+        print('Limpieza de notas vacias')
+        df_calificaciones['nota'] = df_calificaciones['nota'].replace(['N/A', 'NULL', ''], 1)
+        df_calificaciones['nota'] = df_calificaciones['nota'].replace('UNO', 1)
+        df_calificaciones['nota'] = df_calificaciones['nota'].replace('DOS', 2)
+        df_calificaciones['nota'] = df_calificaciones['nota'].replace('TRES', 3)
+        df_calificaciones['nota'] = df_calificaciones['nota'].replace('CUATRO', 4)
+        df_calificaciones['nota'] = df_calificaciones['nota'].replace('CINCO', 5)
+        df_calificaciones['nota'] = df_calificaciones['nota'].replace('APROBADO', 3.5)
+
+        # Convertir la columna a numérica, forzando los errores a NaN
+        df_calificaciones['nota'] = pd.to_numeric(df_calificaciones['nota'], errors='coerce')
+
+        # 4. ELIMINAR NOTAS FUERA DE RANGO (escala 1.0 - 5.0)
+        notas_fuera_de_rango = df_calificaciones[~df_calificaciones['nota'].between(1.0, 5.0)]
+        df_calificaciones = df_calificaciones[df_calificaciones['nota'].between(1.0, 5.0)]
+        print(f"Se encontraron {len(notas_fuera_de_rango)} registros con notas inválidas.")
+
+        print(f"Registros limpios: {len(df_calificaciones)}")
+        print(notas_fuera_de_rango)
+
+
+        # index=False evita guardar el índice de Pandas en el archivo
+        df_calificaciones.to_csv('data/proccesed/calificaciones_limpias.csv', index=False)
