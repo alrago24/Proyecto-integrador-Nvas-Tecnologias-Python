@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-# David
+
 def limpiar_usuarios(df_usuarios):
     # Limpieza de espacio y texto en formato titulo.
     print("Limpieza de espacio y texto en formato titulo")
@@ -75,7 +75,7 @@ def limpieza_perfiles(df_perfiles):
     # index=False evita guardar el índice de Pandas en el archivo
     df_perfiles.to_csv("data/proccesed/perfiles_limpios.csv", index=False)
 
-    def limpieza_cursos(df_cursos):
+def limpieza_cursos(df_cursos):
         print("Limpieza de espacio y texto en formato titulo")
         df_cursos["nombre"] = df_cursos["nombre"].str.strip().str.title()
         df_cursos["descripcion"] = df_cursos["descripcion"].str.strip().str.capitalize()
